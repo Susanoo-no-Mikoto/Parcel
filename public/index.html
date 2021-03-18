@@ -5,12 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab2, Parcel</title>
-    <link rel="stylesheet" href="./style.less" ></link>
+    <link rel="stylesheet" href="./style.less" >
     <link rel="icon" href="./favicon.png">   
 </head>
 <body>
     <h1>Hello parcel!</h1>
-    <div id = "d1"></div>
-    <script src="../src/index.js"></script>         
+    <h2>Лучшие игроки</h2>
+    <table border="3" align="center" width="80%">
+        <tr>
+            <th>Логин</th>
+            <th>Очки</th>
+            <th>Дата</th>
+            <th>Место</th>
+        </tr>
+        
+        <tr align="center">
+            <td id = "login1"></td>
+            <td id = "score1"></td>
+            <td id = "date1"></td>
+            <td>1</td>    
+        </tr>
+        <tr align="center">
+            <td id = "login2"></td>
+            <td id = "score2"></td>
+            <td id = "date2"></td>
+            <td>2</td>    
+        </tr>
+        <tr align="center">
+            <td id = "login3"></td>
+            <td id = "score3"></td>
+            <td id = "date3"></td>
+            <td>3</td>    
+        </tr>
+        <tr align="center">
+            <td id = "login4"></td>
+            <td id = "score4"></td>
+            <td id = "date4"></td>
+            <td>4</td>   
+        </tr>
+        <tr align="center">
+            <td id = "login5"></td>
+            <td id = "score5"></td>
+            <td id = "date5"></td>
+            <td>5</td>
+        </tr>
+        <tr align="center">
+            <td id = "login6"></td>
+            <td id = "score6"></td>
+            <td id = "date6"></td>
+            <td>6</td>
+        </tr>
+        <tr align="center">
+            <td id = "login7"></td>
+            <td id = "score7"></td>
+            <td id = "date7"></td>
+            <td>7</td>
+        </tr>
+        <tr align="center">
+            <td id = "login8"></td>
+            <td id = "score8"></td>
+            <td id = "date8"></td>
+            <td>8</td>
+        </tr>
+        <tr align="center">
+            <td id = "login9"></td>
+            <td id = "score9"></td>
+            <td id = "date9"></td>
+            <td>9</td>
+        </tr>
+        <tr align="center">
+            <td id = "login10"></td>
+            <td id = "score10"></td>
+            <td id = "date10"></td>
+            <td>10</td>
+        </tr> 
+    </table>
+    <form>
+        <input type="text" class="place_for_search" id="text-to-find" value="" placeholder="Поиск" autofocus> 
+        <input  type="submit" class="button_for_search" value="Начать" title="Начать поиск">
+  </form>
+    <script src="../src/index.js"></script> 
+    <script src="../src/search.js"></script>        
 </body>
 </html>

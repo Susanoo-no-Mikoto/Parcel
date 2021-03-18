@@ -1,1 +1,0 @@
-document.body.getElementsById('d1').innerHTML = ""; 
