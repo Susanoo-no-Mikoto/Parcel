@@ -10,7 +10,13 @@
 </head>
 <body>
     <h1>Hello parcel!</h1>
-    <h2>Лучшие игроки</h2>
+    <form id="form1" align = 'center'>
+        <input type="text" class="Ввод логина" id="Ввод-логина"  placeholder="Введите Логин" > 
+        <input type="text" class="Ввод очков" id="Ввод-очков"   placeholder="Введите Очки" >
+        <input type="text" class="Ввод даты" id="Ввод-даты"  placeholder="Введите Дату" >
+        <input  type="button" id="sub" class="Принять" value="Принять" >
+  </form>
+    <h2>Лучшие игроки</h2> 
     <table border="3" align="center" width="80%">
         <tr>
             <th>Логин</th>
@@ -19,7 +25,7 @@
             <th>Место</th>
         </tr>
         
-        <tr align="center">
+        <tr id="first" align="center">
             <td id = "login1"></td>
             <td id = "score1"></td>
             <td id = "date1"></td>
@@ -80,11 +86,8 @@
             <td>10</td>
         </tr> 
     </table>
-    <form>
-        <input type="text" class="place_for_search" id="text-to-find" value="" placeholder="Поиск" autofocus> 
-        <input  type="submit" class="button_for_search" value="Начать" title="Начать поиск">
-  </form>
+    
     <script src="../src/index.js"></script> 
-    <script src="../src/search.js"></script>        
+    <script src="../src/input.js"></script>        
 </body>
 </html>

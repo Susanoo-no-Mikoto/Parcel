@@ -127,13 +127,12 @@ var _fs = _interopRequireDefault(require("fs"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var string = JSON.parse("[\r\n    {\r\n        \"login\": \"Masseru\",\r\n        \"score\": \"4789\",\r\n        \"date\": \"05.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Nar\",\r\n        \"score\": \"9597\",\r\n        \"date\": \"16.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Yabryr\",\r\n        \"score\": \"6710\",\r\n        \"date\": \"23.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Tat\",\r\n        \"score\": \"3041\",\r\n        \"date\": \"23.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Uamaynnd\",\r\n        \"score\": \"3893\",\r\n        \"date\": \"29.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Destafi\",\r\n        \"score\": \"7376\",\r\n        \"date\": \"16.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Qumindor\",\r\n        \"score\": \"3899\",\r\n        \"date\": \"26.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Saye\",\r\n        \"score\": \"1493\",\r\n        \"date\": \"01.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Zalaneli\",\r\n        \"score\": \"8899\",\r\n        \"date\": \"04.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Faleriena\",\r\n        \"score\": \"8093\",\r\n        \"date\": \"16.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Usulileri\",\r\n        \"score\": \"8093\",\r\n        \"date\": \"17.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Zuynes\",\r\n        \"score\": \"7068\",\r\n        \"date\": \"08.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Bddandert\",\r\n        \"score\": \"8526\",\r\n        \"date\": \"14.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Lis\",\r\n        \"score\": \"5430\",\r\n        \"date\": \"19.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Lafonel\",\r\n        \"score\": \"2685\",\r\n        \"date\": \"29.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Xtiara\",\r\n        \"score\": \"5206\",\r\n        \"date\": \"10.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Udyl\",\r\n        \"score\": \"6013\",\r\n        \"date\": \"16.03.2021\"\r\n    }\r\n]");
-FindingTheBestPlayers(string); //document.querySelector('search-boxLogin').oninput = SearchForPlayersByLogin(string)
-//SearchForPlayersByLogin(string);
-//SearchPlayersByDate(string);
+FindingTheBestPlayers(string);
 
 function FindingTheBestPlayers() {
   string = string.sort(scoreQQ);
-  string = string.splice(0, 10);
+  string = string.splice(0, 10); //RiteRow(string);
+
   document.getElementById("login1").innerHTML = string[0].login;
   document.getElementById("score1").innerHTML = string[0].score;
   document.getElementById("date1").innerHTML = string[0].date;
@@ -166,36 +165,13 @@ function FindingTheBestPlayers() {
   document.getElementById("date10").innerHTML = string[9].date;
 }
 
+function RiteRow() {}
+
 function scoreQQ(a, b) {
   if (a.score > b.score) {
     return -1;
   }
 }
-/*function SearchForPlayersByLogin() {
-    console.log(string);
-    let input = document.querySelector('#inputLogin');
-    input.oninput = function() {
-        let value = this.value.trim();
-        if(value){
-            string.login.forEach(elem => {
-                if(elem.innerText.search(value) == -1){
-                    elem.clssList.add('hide');
-                }
-            });
-        }else{
-            string.login.forEach(elem => {
-                elem.clssList.remove('hide');
-            })
-        }
-        console.log(this.value);
-    }
-}
-
-
-function SearchPlayersByDate(params) {
-    
-}
-*/
 },{"fs":"../node_modules/parcel-bundler/src/builtins/_empty.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -224,7 +200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49492" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52642" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

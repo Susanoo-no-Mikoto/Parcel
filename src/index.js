@@ -1,14 +1,12 @@
 import fs from 'fs';
 let string = JSON.parse(fs.readFileSync(__dirname + '/pp.json', 'utf8'));
 FindingTheBestPlayers(string);
-//document.querySelector('search-boxLogin').oninput = SearchForPlayersByLogin(string)
-//SearchForPlayersByLogin(string);
-//SearchPlayersByDate(string);
 
 
 function FindingTheBestPlayers(){
     string = string.sort(scoreQQ);
     string = string.splice(0,10);
+    //RiteRow(string);
     
     document.getElementById("login1").innerHTML = string[0].login;
     document.getElementById("score1").innerHTML = string[0].score;
@@ -49,7 +47,11 @@ function FindingTheBestPlayers(){
     document.getElementById("login10").innerHTML = string[9].login;
     document.getElementById("score10").innerHTML = string[9].score;
     document.getElementById("date10").innerHTML = string[9].date;   
-}   
+}  
+
+function RiteRow(){
+
+}
  
 
 function scoreQQ(a,b){
@@ -57,30 +59,3 @@ function scoreQQ(a,b){
         return -1;
     }
 }
-
-
-/*function SearchForPlayersByLogin() {
-    console.log(string);
-    let input = document.querySelector('#inputLogin');
-    input.oninput = function() {
-        let value = this.value.trim();
-        if(value){
-            string.login.forEach(elem => {
-                if(elem.innerText.search(value) == -1){
-                    elem.clssList.add('hide');
-                }
-            });
-        }else{
-            string.login.forEach(elem => {
-                elem.clssList.remove('hide');
-            })
-        }
-        console.log(this.value);
-    }
-}
-
-
-function SearchPlayersByDate(params) {
-    
-}
-*/
