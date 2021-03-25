@@ -32,7 +32,7 @@ function InputOfPlayerData(){
             dd = String(date.getDate()).padStart(2, '0'),
             mm = String(date.getMonth()).padStart(2, '0'),
             yyyy = date.getFullYear();
-        date = dd + '.' + mm + '.' + yyyy; 
+        date = yyyy + '.' + mm + '.' + dd; 
         let inpData = [{login: '', score: '', date: ''}];
         inpData.login = inplogin;
         inpData.score = inpscore;
@@ -88,6 +88,9 @@ function FindingTheBestPlayers(){
 function scoreQQ(a,b) {
     a.score = Number(a.score);
     b.score = Number(b.score);
+    //a.date = Number(a.date);
+    //b.date = Number(b.date);
+    
     if(a.score > b.score){
         return -1;
     }
