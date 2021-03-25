@@ -126,48 +126,55 @@ var _fs = _interopRequireDefault(require("fs"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var string = JSON.parse("[\r\n    {\r\n        \"login\": \"Masseru\",\r\n        \"score\": \"4789\",\r\n        \"date\": \"05.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Nar\",\r\n        \"score\": \"9597\",\r\n        \"date\": \"16.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Yabryr\",\r\n        \"score\": \"6710\",\r\n        \"date\": \"23.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Tat\",\r\n        \"score\": \"3041\",\r\n        \"date\": \"23.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Uamaynnd\",\r\n        \"score\": \"3893\",\r\n        \"date\": \"29.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Destafi\",\r\n        \"score\": \"7376\",\r\n        \"date\": \"16.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Qumindor\",\r\n        \"score\": \"3899\",\r\n        \"date\": \"26.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Saye\",\r\n        \"score\": \"1493\",\r\n        \"date\": \"01.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Zalaneli\",\r\n        \"score\": \"8899\",\r\n        \"date\": \"04.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Faleriena\",\r\n        \"score\": \"8093\",\r\n        \"date\": \"16.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Usulileri\",\r\n        \"score\": \"8093\",\r\n        \"date\": \"17.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Zuynes\",\r\n        \"score\": \"7068\",\r\n        \"date\": \"08.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Bddandert\",\r\n        \"score\": \"8526\",\r\n        \"date\": \"14.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Lis\",\r\n        \"score\": \"5430\",\r\n        \"date\": \"19.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Lafonel\",\r\n        \"score\": \"2685\",\r\n        \"date\": \"29.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Xtiara\",\r\n        \"score\": \"5206\",\r\n        \"date\": \"10.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Udyl\",\r\n        \"score\": \"6013\",\r\n        \"date\": \"16.03.2021\"\r\n    }\r\n]");
-FindingTheBestPlayers(string);
+InputOfPlayerData();
+FindingTheBestPlayers();
 
-function FindingTheBestPlayers() {
-  string = string.sort(scoreQQ);
-  string = string.splice(0, 10); //RiteRow(string);
+function InputOfPlayerData() {
+  var string = JSON.parse("[\r\n    {\r\n        \"login\": \"Masseru\",\r\n        \"score\": \"4789\",\r\n        \"date\": \"05.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Nar\",\r\n        \"score\": \"9597\",\r\n        \"date\": \"16.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Yabryr\",\r\n        \"score\": \"6710\",\r\n        \"date\": \"23.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Tat\",\r\n        \"score\": \"3041\",\r\n        \"date\": \"23.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Uamaynnd\",\r\n        \"score\": \"3893\",\r\n        \"date\": \"29.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Destafi\",\r\n        \"score\": \"7376\",\r\n        \"date\": \"16.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Qumindor\",\r\n        \"score\": \"3899\",\r\n        \"date\": \"26.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Saye\",\r\n        \"score\": \"1493\",\r\n        \"date\": \"01.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Zalaneli\",\r\n        \"score\": \"8899\",\r\n        \"date\": \"04.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Faleriena\",\r\n        \"score\": \"8093\",\r\n        \"date\": \"16.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Usulileri\",\r\n        \"score\": \"8093\",\r\n        \"date\": \"17.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Zuynes\",\r\n        \"score\": \"7068\",\r\n        \"date\": \"08.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Bddandert\",\r\n        \"score\": \"8526\",\r\n        \"date\": \"14.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Lis\",\r\n        \"score\": \"5430\",\r\n        \"date\": \"19.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Lafonel\",\r\n        \"score\": \"2685\",\r\n        \"date\": \"29.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Xtiara\",\r\n        \"score\": \"5206\",\r\n        \"date\": \"10.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Udyl\",\r\n        \"score\": \"6013\",\r\n        \"date\": \"16.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Udyl\",\r\n        \"score\": \"900\",\r\n        \"date\": \"16.03.2021\"\r\n    }\r\n]");
+  var input = document.getElementById('sub');
+  input.addEventListener("click", function () {
+    var inplogin = document.forms['form1'].elements['Ввод-логина'].value;
+    string.sort(scoreQQ);
+    var result = [];
 
-  document.getElementById("login1").innerHTML = string[0].login;
-  document.getElementById("score1").innerHTML = string[0].score;
-  document.getElementById("date1").innerHTML = string[0].date;
-  document.getElementById("login2").innerHTML = string[1].login;
-  document.getElementById("score2").innerHTML = string[1].score;
-  document.getElementById("date2").innerHTML = string[1].date;
-  document.getElementById("login3").innerHTML = string[2].login;
-  document.getElementById("score3").innerHTML = string[2].score;
-  document.getElementById("date3").innerHTML = string[2].date;
-  document.getElementById("login4").innerHTML = string[3].login;
-  document.getElementById("score4").innerHTML = string[3].score;
-  document.getElementById("date4").innerHTML = string[3].date;
-  document.getElementById("login5").innerHTML = string[4].login;
-  document.getElementById("score5").innerHTML = string[4].score;
-  document.getElementById("date5").innerHTML = string[4].date;
-  document.getElementById("login6").innerHTML = string[5].login;
-  document.getElementById("score6").innerHTML = string[5].score;
-  document.getElementById("date6").innerHTML = string[5].date;
-  document.getElementById("login7").innerHTML = string[6].login;
-  document.getElementById("score7").innerHTML = string[6].score;
-  document.getElementById("date7").innerHTML = string[6].date;
-  document.getElementById("login8").innerHTML = string[7].login;
-  document.getElementById("score8").innerHTML = string[7].score;
-  document.getElementById("date8").innerHTML = string[7].date;
-  document.getElementById("login9").innerHTML = string[8].login;
-  document.getElementById("score9").innerHTML = string[8].score;
-  document.getElementById("date9").innerHTML = string[8].date;
-  document.getElementById("login10").innerHTML = string[9].login;
-  document.getElementById("score10").innerHTML = string[9].score;
-  document.getElementById("date10").innerHTML = string[9].date;
+    for (var i = 0; i < string.length; i++) {
+      if (inplogin == string[i].login) {
+        var rank = i + 1;
+        result.push('Логин: ' + string[i].login + ' ' + 'Очки: ' + string[i].score + ' ' + 'Дата: ' + string[i].date + ' ' + 'Место: ' + rank);
+      }
+    } //console.log(result);
+
+
+    alert(result);
+  });
 }
 
-function RiteRow() {}
+function FindingTheBestPlayers() {
+  var string = JSON.parse("[\r\n    {\r\n        \"login\": \"Masseru\",\r\n        \"score\": \"4789\",\r\n        \"date\": \"05.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Nar\",\r\n        \"score\": \"9597\",\r\n        \"date\": \"16.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Yabryr\",\r\n        \"score\": \"6710\",\r\n        \"date\": \"23.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Tat\",\r\n        \"score\": \"3041\",\r\n        \"date\": \"23.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Uamaynnd\",\r\n        \"score\": \"3893\",\r\n        \"date\": \"29.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Destafi\",\r\n        \"score\": \"7376\",\r\n        \"date\": \"16.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Qumindor\",\r\n        \"score\": \"3899\",\r\n        \"date\": \"26.02.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Saye\",\r\n        \"score\": \"1493\",\r\n        \"date\": \"01.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Zalaneli\",\r\n        \"score\": \"8899\",\r\n        \"date\": \"04.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Faleriena\",\r\n        \"score\": \"8093\",\r\n        \"date\": \"16.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Usulileri\",\r\n        \"score\": \"8093\",\r\n        \"date\": \"17.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Zuynes\",\r\n        \"score\": \"7068\",\r\n        \"date\": \"08.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Bddandert\",\r\n        \"score\": \"8526\",\r\n        \"date\": \"14.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Lis\",\r\n        \"score\": \"5430\",\r\n        \"date\": \"19.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Lafonel\",\r\n        \"score\": \"2685\",\r\n        \"date\": \"29.04.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Xtiara\",\r\n        \"score\": \"5206\",\r\n        \"date\": \"10.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Udyl\",\r\n        \"score\": \"6013\",\r\n        \"date\": \"16.03.2021\"\r\n    },\r\n    {\r\n        \"login\": \"Udyl\",\r\n        \"score\": \"900\",\r\n        \"date\": \"16.03.2021\"\r\n    }\r\n]");
+  string.sort(scoreQQ);
+  string = string.splice(0, 10);
+  var login = [],
+      score = [],
+      date = [],
+      rank = [];
+
+  for (var i = 0; i < string.length; i++) {
+    login.push(string[i].login);
+    score.push(string[i].score);
+    date.push(string[i].date);
+    rank.push(i + 1);
+  }
+
+  document.getElementById("login").innerHTML = login.join('<br />');
+  document.getElementById("score").innerHTML = score.join('<br />');
+  document.getElementById("date").innerHTML = date.join('<br />');
+  document.getElementById("rank").innerHTML = rank.join('<br />');
+}
 
 function scoreQQ(a, b) {
+  a.score = Number(a.score);
+  b.score = Number(b.score);
+
   if (a.score > b.score) {
     return -1;
   }
@@ -200,7 +207,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52642" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58480" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

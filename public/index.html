@@ -10,13 +10,12 @@
 </head>
 <body>
     <h1>Hello parcel!</h1>
-    <form id="form1" align = 'center'>
+    <h2>Поиск игрока</h2>
+        <form id="form1" align='center'>
         <input type="text" class="Ввод логина" id="Ввод-логина"  placeholder="Введите Логин" > 
-        <input type="text" class="Ввод очков" id="Ввод-очков"   placeholder="Введите Очки" >
-        <input type="text" class="Ввод даты" id="Ввод-даты"  placeholder="Введите Дату" >
         <input  type="button" id="sub" class="Принять" value="Принять" >
-  </form>
-    <h2>Лучшие игроки</h2> 
+        </form>
+    <h3>Лучшие игроки</h3> 
     <table border="3" align="center" width="80%">
         <tr>
             <th>Логин</th>
@@ -24,70 +23,16 @@
             <th>Дата</th>
             <th>Место</th>
         </tr>
-        
-        <tr id="first" align="center">
-            <td id = "login1"></td>
-            <td id = "score1"></td>
-            <td id = "date1"></td>
-            <td>1</td>    
+
+        <tr>
+            <td id="login" align="center"></td>
+            <td id="score" align="center"></td>
+            <td id="date" align="center"></td>
+            <td id="rank" align="center"></td>
         </tr>
-        <tr align="center">
-            <td id = "login2"></td>
-            <td id = "score2"></td>
-            <td id = "date2"></td>
-            <td>2</td>    
-        </tr>
-        <tr align="center">
-            <td id = "login3"></td>
-            <td id = "score3"></td>
-            <td id = "date3"></td>
-            <td>3</td>    
-        </tr>
-        <tr align="center">
-            <td id = "login4"></td>
-            <td id = "score4"></td>
-            <td id = "date4"></td>
-            <td>4</td>   
-        </tr>
-        <tr align="center">
-            <td id = "login5"></td>
-            <td id = "score5"></td>
-            <td id = "date5"></td>
-            <td>5</td>
-        </tr>
-        <tr align="center">
-            <td id = "login6"></td>
-            <td id = "score6"></td>
-            <td id = "date6"></td>
-            <td>6</td>
-        </tr>
-        <tr align="center">
-            <td id = "login7"></td>
-            <td id = "score7"></td>
-            <td id = "date7"></td>
-            <td>7</td>
-        </tr>
-        <tr align="center">
-            <td id = "login8"></td>
-            <td id = "score8"></td>
-            <td id = "date8"></td>
-            <td>8</td>
-        </tr>
-        <tr align="center">
-            <td id = "login9"></td>
-            <td id = "score9"></td>
-            <td id = "date9"></td>
-            <td>9</td>
-        </tr>
-        <tr align="center">
-            <td id = "login10"></td>
-            <td id = "score10"></td>
-            <td id = "date10"></td>
-            <td>10</td>
-        </tr> 
     </table>
     
     <script src="../src/index.js"></script> 
-    <script src="../src/input.js"></script>        
+           
 </body>
 </html>
