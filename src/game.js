@@ -1,11 +1,21 @@
 let play = document.getElementById('sub3');
 var arrscores = [];
+var arrsumm;
 play.addEventListener("click", function (){
-    let inplogin = document.forms['form3'].elements['Логин'].value;
     let timerId = setInterval(() => game(), 3000);
-    setTimeout(() => { clearInterval(timerId)}, 31000);
+    let inplogin = document.forms['form3'].elements['Логин'].value,
+        date = new Date(),
+        dd = String(date.getDate()).padStart(2, '0'),
+        mm = String(date.getMonth()).padStart(2, '0'),
+        yyyy = date.getFullYear();
+    date = yyyy + '.' + mm + '.' + dd;
+    setTimeout(() => {
+        clearInterval(timerId);
+        document.getElementById("login").innerHTML = inplogin;
+        document.getElementById("score").innerHTML = arrsumm;
+        document.getElementById("date").innerHTML = date;
+    }, 31000);  
 })
-
 
 
 function game(){
@@ -26,7 +36,7 @@ function game(){
         } 
     }
     arrscores.push(score);
-    let arrsumm = arrscores.reduce(function(a,b){
+    arrsumm = arrscores.reduce(function(a,b){
         return (a+b);
     })
     document.getElementById("scoregame").innerHTML = arrsumm;
